@@ -1,0 +1,34 @@
+h1{
+    color: black;
+    font-size: medium;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: left;
+    background-color: antiquewhite;
+    font-weight: 650;
+    line-height: 1.5;
+}
+div{
+    width: 200pxpx;
+    padding: 10px;
+    border: 5px gray;
+    margin: 5px;
+}
+input{
+   background-color: blue;
+   color: antiquewhite;
+   padding: auto;
+   border: darkblue; 
+   border-radius: 2px;
+   cursor: pointer;
+   font-size: 12px;
+}
+input[type="submit"]:hover {
+    background-color: antiquewhite;
+}
+footer{
+    background-color: antiquewhite;
+    color: black;
+    padding: 10px;
+    text-align: center;
+    font-size: 12px;
+}
