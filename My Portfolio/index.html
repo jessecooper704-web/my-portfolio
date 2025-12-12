@@ -26,3 +26,147 @@
         </ul>
     </nav>
 </header>
+
+<!-- =============================
+     FIRST SECTION
+============================= -->
+<section id="discussion" class="reveal">
+    <h2>PC Building Discussion</h2>
+    <p>This is a discussion page for PC builders of all skill levels.</p>
+
+    <h3>Learn more from experienced builders</h3>
+    <p>
+        Visit
+        <a href="https://linustechtips.com/" target="_blank">Linus Tech Tips</a>
+        to learn and discuss more.
+    </p>
+
+    <h3>Razer is cool</h3>
+    <img src="https://assets2.razerzone.com/images/downloads-page/thumbnails/quad-damage_thumbnail.jpg"
+         alt="razer logo" loading="lazy">
+</section>
+
+<!-- =============================
+     TOPICS SECTION
+============================= -->
+<section id="topics" class="reveal">
+    <h2>Interesting Topics to Discuss</h2>
+
+    <ol>
+        <li>MSI EZ120 fans</li>
+        <li>Corsair ICUE Software</li>
+        <li>RGB: Yay or Nay?</li>
+    </ol>
+</section>
+
+<!-- =============================
+     PC BRAND RANKING
+============================= -->
+<section id="ranking" class="reveal">
+    <h2>PC Brands Ranked (My Opinion)</h2>
+    <table border="4">
+        <tr>
+            <th>Brand</th>
+            <th>Rank</th>
+        </tr>
+        <tr>
+            <td>MSI</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>Razer</td>
+            <td>2</td>
+        </tr>
+        <tr>
+            <td>Corsair</td>
+            <td>3</td>
+        </tr>
+    </table>
+</section>
+
+<!-- =============================
+     LINKS SECTION
+============================= -->
+<section id="links" class="reveal">
+    <h2>More Pages</h2>
+    <p>
+        Visit my about page:
+        <a href="about.html">About Page</a>
+    </p>
+
+    <div class="socials">
+        <a href="https://github.com/" target="_blank">GitHub</a>
+        <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+    </div>
+</section>
+
+<!-- =============================
+     BACK TO TOP BUTTON
+============================= -->
+<button id="back-top">↑</button>
+
+<!-- =============================
+     FOOTER
+============================= -->
+<footer>
+    <p>PC Builder Community © 2025</p>
+</footer>
+
+<!-- =============================
+     JAVASCRIPT
+============================= -->
+<script>
+// ======================
+// Typewriter effect
+// ======================
+const text = "Welcome to My PC Building Page!";
+let index = 0;
+
+function typeWriter() {
+    if (index < text.length) {
+        document.getElementById("type").textContent += text[index];
+        index++;
+        setTimeout(typeWriter, 80);
+    }
+}
+typeWriter();
+
+
+// ======================
+// Dark Mode Toggle
+// ======================
+document.getElementById("theme-toggle").onclick = () => {
+    document.body.classList.toggle("dark-mode");
+};
+
+
+// ======================
+// Scroll Reveal on Scroll
+// ======================
+const reveals = document.querySelectorAll(".reveal");
+
+window.addEventListener("scroll", () => {
+    reveals.forEach(r => {
+        const top = r.getBoundingClientRect().top;
+        if (top < window.innerHeight - 100) {
+            r.classList.add("visible");
+        }
+    });
+});
+
+
+// ======================
+// Back to Top Button
+// ======================
+const btn = document.getElementById("back-top");
+
+window.addEventListener("scroll", () => {
+    btn.style.display = window.scrollY > 200 ? "block" : "none";
+});
+
+btn.onclick = () =>
+    window.scrollTo({ top: 0, behavior: "smooth" });
+</script>
+
+</body>
+</html>
