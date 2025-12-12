@@ -1,34 +1,167 @@
-h1{
-    color: black;
-    font-size: medium;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    text-align: left;
-    background-color: antiquewhite;
-    font-weight: 650;
-    line-height: 1.5;
+/* ===============================
+   BASE STYLES
+================================*/
+html {
+    scroll-behavior: smooth;
 }
-div{
-    width: 200pxpx;
-    padding: 10px;
-    border: 5px gray;
-    margin: 5px;
-}
-input{
-   background-color: blue;
-   color: antiquewhite;
-   padding: auto;
-   border: darkblue; 
-   border-radius: 2px;
-   cursor: pointer;
-   font-size: 12px;
-}
-input[type="submit"]:hover {
-    background-color: antiquewhite;
-}
-footer{
-    background-color: antiquewhite;
-    color: black;
-    padding: 10px;
-    text-align: center;
+
+body {
+    font-family: 'Times New Roman', Times, serif;
     font-size: 12px;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+}
+
+/* Dark Mode */
+.dark-mode {
+    background-color: #111;
+    color: #fff;
+}
+.dark-mode header,
+.dark-mode footer {
+    background-color: #000;
+}
+
+/* Navigation */
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+nav ul li a:hover {
+    text-decoration: underline;
+    transform: scale(1.1);
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+}
+
+/* ===============================
+   BUTTON STYLES
+================================*/
+button {
+    padding: 8px 14px;
+    border: none;
+    background: #333;
+    color: #fff;
+    cursor: pointer;
+    margin: 5px;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.1);
+    background: #555;
+}
+
+/* Filter Buttons */
+.filter-btn {
+    background: #444;
+}
+.filter-btn:hover {
+    background: #666;
+}
+
+/* ===============================
+   SCROLL REVEAL ANIMATION
+================================*/
+.reveal {
+    opacity: 0;
+    transform: translateY(25px);
+    transition: 0.8s ease-out;
+}
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ===============================
+   PROJECT CARDS
+================================*/
+.project {
+    padding: 12px;
+    background: white;
+    margin: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    transition: 0.3s;
+}
+
+.project:hover {
+    transform: scale(1.02);
+    border-color: #999;
+}
+
+/* ===============================
+   BACK TO TOP BUTTON
+================================*/
+#back-top {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    padding: 10px 14px;
+    background: #333;
+    color: white;
+    border-radius: 5px;
+    display: none;
+    cursor: pointer;
+    transition: 0.3s;
+    z-index: 999;
+}
+
+#back-top:hover {
+    background: #555;
+}
+
+/* ===============================
+   SOCIAL ICONS
+================================*/
+.socials a {
+    margin: 0 10px;
+    font-size: 14px;
+    color: #333;
+    transition: 0.3s;
+}
+.socials a:hover {
+    color: #000;
+    transform: scale(1.1);
+}
+.dark-mode .socials a {
+    color: white;
+}
+
+/* ===============================
+   MOBILE
+================================*/
+@media (max-width: 600px) {
+    nav ul li {
+        display: block;
+        margin: 10px;
+    }
+    section {
+        padding: 10px;
+        margin: 10px;
+    }
 }
